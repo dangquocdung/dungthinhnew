@@ -55,6 +55,8 @@
 <meta property="og:description" content="{{$PageDescription}}"/>
 <meta property="og:url" content="{{ url()->full()  }}"/>
 <meta property="og:type" content="website"/>
+<link rel="stylesheet" type="text/css" href="/flipbook/deploy/css/flipbook.style.css">
+
 
 
 
