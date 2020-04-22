@@ -1,9 +1,6 @@
-< script type = "text/javascript" >
+$(document).ready(function() {
+    $("#xem-pdf").flipBook({
+        pdfUrl: "/uploads/topics/{{ $Topic->attach_file }}"
+    });
 
-    $(document).ready(function() {
-        $("#xem-pdf").flipBook({
-            pdfUrl: "/uploads/topics/15875488906682.pdf",
-        });
-
-    }) <
-    /script>
+})
