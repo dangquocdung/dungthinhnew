@@ -18,6 +18,7 @@
 <script src="{{ URL::asset('frontEnd/js/animate.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/custom.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/owl-carousel/owl.carousel.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/app.js') }}"></script>
 
 @if (isset($Topic))
 
