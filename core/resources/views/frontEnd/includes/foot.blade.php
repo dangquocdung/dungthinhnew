@@ -6,7 +6,7 @@
 
 @if (isset($Topic))
 
-    <script src="{{ mix('core/public/js/app.js') }}"></script>
+    <script src="{{ URL::asset('frontEnd/js/app.js') }}"></script>
 
 @else
 
