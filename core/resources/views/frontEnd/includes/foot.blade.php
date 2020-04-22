@@ -7,17 +7,6 @@
 </script>
 
 
-<script src="{{ URL::asset('frontEnd/js/jquery.easing.1.3.js') }}"></script>
-<script src="{{ URL::asset('frontEnd/js/bootstrap.min.js') }}"></script>
-<script src="{{ URL::asset('frontEnd/js/jquery.fancybox.pack.js') }}"></script>
-<script src="{{ URL::asset('frontEnd/js/jquery.fancybox-media.js') }}"></script>
-<script src="{{ URL::asset('frontEnd/js/google-code-prettify/prettify.js') }}"></script>
-<script src="{{ URL::asset('frontEnd/js/portfolio/jquery.quicksand.js') }}"></script>
-<script src="{{ URL::asset('frontEnd/js/portfolio/setting.js') }}"></script>
-<script src="{{ URL::asset('frontEnd/js/jquery.flexslider.js') }}"></script>
-<script src="{{ URL::asset('frontEnd/js/animate.js') }}"></script>
-<script src="{{ URL::asset('frontEnd/js/custom.js') }}"></script>
-<script src="{{ URL::asset('frontEnd/js/owl-carousel/owl.carousel.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/app.js') }}"></script>
 
 @if (isset($Topic))
@@ -34,6 +23,19 @@
 
 
 @endif
+
+<script src="{{ URL::asset('frontEnd/js/jquery.easing.1.3.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/jquery.fancybox.pack.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/jquery.fancybox-media.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/google-code-prettify/prettify.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/portfolio/jquery.quicksand.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/portfolio/setting.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/jquery.flexslider.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/animate.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/custom.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/owl-carousel/owl.carousel.js') }}"></script>
+
 
 
 
