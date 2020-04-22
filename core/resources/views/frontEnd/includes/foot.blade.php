@@ -1,26 +1,16 @@
 <a href="#" title="{{ __('frontend.toTop') }}" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
-
-
 <script type="text/javascript">
     var page_dir = "{{ @Helper::currentLanguage()->direction }}";
 </script>
 
 @if (isset($Topic))
 
-<script type="text/javascript">
-
-    $(document).ready(function () {
-        $("#xem-pdf").flipBook({
-            pdfUrl:"/uploads/topics/{{ $Topic->attach_file }}",
-        });
-
-    })
-</script>
+    <script src="{{ mix('frontEnd/js/app.js') }}"></script>
 
 @else
 
-<script src="{{ URL::asset('frontEnd/js/jquery.js') }}"></script>
+    <script src="{{ URL::asset('frontEnd/js/jquery.js') }}"></script>
 
 @endif
 
@@ -35,7 +25,6 @@
 <script src="{{ URL::asset('frontEnd/js/animate.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/custom.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/owl-carousel/owl.carousel.js') }}"></script>
-
 
 {{--ajax subscribe to news letter--}}
 @if(Helper::GeneralSiteSettings("style_subscribe"))
@@ -141,7 +130,6 @@
 @if($WebmasterSettings->google_analytics_code !="")
     {!! $WebmasterSettings->google_analytics_code !!}
 @endif
-
 
 <?php
 if ($PageTitle == "") {
