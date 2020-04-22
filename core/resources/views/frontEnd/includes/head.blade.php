@@ -56,12 +56,6 @@
 <meta property="og:url" content="{{ url()->full()  }}"/>
 <meta property="og:type" content="website"/>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/flipbook/deploy/css/flipbook.style.css">
-
-
-<script src="{{ URL::asset('/flipbook/deploy/js/flipbook.min.js') }}"></script>
 
 
 
