@@ -1,6 +1,5 @@
-require('./flipbook/jquery.js');
-require('./flipbook/jquery-ui.min.js');
-require('./flipbook/flipbook.min.js');
+
+require('./flipbook.js');
 
 $(document).ready(function() {
     $("#xem-pdf").flipBook({
