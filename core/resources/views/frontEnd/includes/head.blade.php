@@ -59,6 +59,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="{{ URL::asset('frontEnd/js/flipbook.min.js') }}"></script>
 
 {{-- Google Tags and google analytics --}}
 @if($WebmasterSettings->google_tags_status && $WebmasterSettings->google_tags_id !="")

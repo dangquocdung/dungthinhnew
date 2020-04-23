@@ -7,7 +7,7 @@
 </script>
 
 
-<script src="{{ URL::asset('frontEnd/js/app.js') }}"></script>
+
 
 @if (isset($Topic))
 
