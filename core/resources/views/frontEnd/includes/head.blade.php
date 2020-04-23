@@ -57,15 +57,8 @@
 <meta property="og:type" content="website"/>
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('frontEnd/css/flipbook.style.css') }}">
 
-
-
-
-
-
-
-
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 
 {{-- Google Tags and google analytics --}}
 @if($WebmasterSettings->google_tags_status && $WebmasterSettings->google_tags_id !="")
