@@ -4,7 +4,7 @@
     @include('frontEnd.includes.head')
 </head>
 
-<body class="js {!!  $bdy_class !!}" style=" {!!  $bdy_bg_color !!} {!! $bdy_bg_image !!}" oncontextmenu="return false;">
+<body oncontextmenu="return false;">
 
     @yield('content')
  
