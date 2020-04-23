@@ -443,9 +443,7 @@
                         @endif
                         {{--End of -- Additional Feilds--}}
                         
-                            <div id="xem-pdf">
-                                <img src="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}" />
-                            </div>
+                            <div id="xem-pdf"></div>
 
 
 
