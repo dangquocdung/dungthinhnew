@@ -5,7 +5,6 @@
 <meta name="author" content="{{ URL::to('') }}"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<base href="{{asset()}}">
 <link href="{{ URL::asset('frontEnd/css/bootstrap.min.css') }}" rel="stylesheet"/>
 <link href="{{ URL::asset('frontEnd/css/fancybox/jquery.fancybox.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('frontEnd/css/jcarousel.css') }}" rel="stylesheet"/>
