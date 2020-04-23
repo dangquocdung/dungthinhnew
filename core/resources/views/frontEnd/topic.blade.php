@@ -444,7 +444,7 @@
                         {{--End of -- Additional Feilds--}}
                         
                             <div id="xem-pdf">
-                                <img src="https://hatinhtrade.com.vn/uploads/1587523895-h-400-66.png" />
+                                <img src="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}" />
                             </div>
 
 
