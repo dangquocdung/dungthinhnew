@@ -453,6 +453,11 @@
                                     </div>
                                 @else
                                     <div id="xem-pdf"></div>
+                                    <a href="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}">
+                                        <strong>
+                                            {!! Helper::GetIcon(URL::to('uploads/topics/'),$Topic->attach_file) !!}
+                                            &nbsp;{{ __('frontend.downloadAttach') }}</strong>
+                                    </a>
                                 @endif
                             </div>
                         @endif
