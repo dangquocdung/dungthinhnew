@@ -1,19 +1,9 @@
 <a href="#" title="{{ __('frontend.toTop') }}" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
-
-
 <script type="text/javascript">
     var page_dir = "{{ @Helper::currentLanguage()->direction }}";
 </script>
 
-
-
-
-
-
-
-
-@endif
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <script src="{{ URL::asset('frontEnd/js/jquery.easing.1.3.js') }}"></script>
@@ -34,7 +24,6 @@
 
 <script src="{{ URL::asset('frontEnd/js/flipbook.min.js') }}"></script>
 
-
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -46,10 +35,7 @@
 </script>
 
 @endif
-
-
-
-
+@endif
 
 {{--ajax subscribe to news letter--}}
 @if(Helper::GeneralSiteSettings("style_subscribe"))
@@ -156,7 +142,6 @@
     {!! $WebmasterSettings->google_analytics_code !!}
 @endif
 
-
 <?php
 if ($PageTitle == "") {
     $PageTitle = Helper::GeneralSiteSettings("site_title_" . @Helper::currentLanguage()->code);
@@ -209,4 +194,3 @@ if ($PageTitle == "") {
     }
   };
 </script>
-
