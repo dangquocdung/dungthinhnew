@@ -392,7 +392,9 @@
                                             @endif
                                             {{--End of -- Additional Feilds--}}
 
-                                            <p>{!! strip_tags($Topic->$details) !!}</p>
+                                            <p>{!! mb_substr(strip_tags($Topic->$details),0, 300)."..." !!}</p>
+
+                                            
                                             <div class="bottom-article">
                                                 <ul class="meta-post">
                                                     @if($Topic->webmasterSection->date_status)
