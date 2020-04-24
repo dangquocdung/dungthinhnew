@@ -14,18 +14,13 @@
 <script src="{{ URL::asset('frontEnd/js/portfolio/jquery.quicksand.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/portfolio/setting.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/jquery.flexslider.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/flexslider.min.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/animate.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/custom.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/owl-carousel/owl.carousel.js') }}"></script>
-
 @if (isset($Topic))
-
 @if ( strlen($Topic->attach_file) > 0 && strpos($Topic->attach_file, '.pdf' ))
-
-<script src="{{ URL::asset('frontEnd/js/flipbook.min.js') }}"></script>
-
 <script type="text/javascript">
-
     $(document).ready(function () {
         $("#xem-pdf").flipBook({
             pdfUrl:"/uploads/topics/{{ $Topic->attach_file }}",
@@ -33,10 +28,8 @@
 
     })
 </script>
-
 @endif
 @endif
-
 {{--ajax subscribe to news letter--}}
 @if(Helper::GeneralSiteSettings("style_subscribe"))
     <script type="text/javascript">
