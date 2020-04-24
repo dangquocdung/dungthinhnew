@@ -23,7 +23,7 @@
                 @if(@Auth::user()->permissionsGroup->add_status)
                     <div class="row p-a">
                         <div class="col-sm-12">
-                            <a class="btn btn-fw primary" href="{{route("topicsCreate",$WebmasterSection->id)}}">
+                            <a class="btn btn-fw primary" href="{{route("topicsCreate",$WebmasterSection->id)}}" target="_blank">
                                 <i class="material-icons">&#xe02e;</i>
                                 &nbsp; {{ __('backend.topicNew') }}  {!! $WebmasterSectionTitle !!}
                             </a>
