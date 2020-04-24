@@ -67,7 +67,6 @@
         </div>
     </section>
     
-                        
     <section id="content">
         <div class="container">
             <div class="row">
@@ -120,7 +119,6 @@
                                             Your browser does not support the video tag.
                                         </video>
                                     @endif
-
 
                                 </div>
                             </div>
@@ -198,7 +196,6 @@
                                 @endif
                             </div>
                         @endif
-
 
                         {{--Additional Feilds--}}
                         @if(count($Topic->webmasterSection->customFields) >0)
@@ -442,11 +439,6 @@
                             <br>
                         @endif
                         {{--End of -- Additional Feilds--}}
-                        
-                            <div id="xem-pdf"></div>
-
-
-
                         {!! $Topic->$details !!}
                         @if($Topic->attach_file !="")
                             <?php
@@ -541,7 +533,6 @@
                                 </div>
                             </div>
                         @endif
-
 
                         @if($WebmasterSection->comments_status)
                             <div id="comments">
@@ -672,7 +663,6 @@
                             </div>
                         @endif
 
-
                         @if($WebmasterSection->related_status)
                             @if(count($Topic->relatedTopics))
                                 <div id="Related">
@@ -690,7 +680,6 @@
                                                 ?>
                                                 @foreach($Topic->relatedTopics as $relatedTopic)
                                                     <?php
-
 
                                                     if ($relatedTopic->topic->$title_var != "") {
                                                         $relatedTopic_title = $relatedTopic->topic->$title_var;
