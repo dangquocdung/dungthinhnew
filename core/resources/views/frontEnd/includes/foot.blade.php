@@ -9,21 +9,13 @@
 
 
 
-@if (isset($Topic))
 
-<script type="text/javascript">
 
-    $(document).ready(function () {
-        $("#xem-pdf").flipBook({
-            pdfUrl:"/uploads/topics/{{ $Topic->attach_file }}",
-        });
-
-    })
-</script>
 
 
 @endif
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <script src="{{ URL::asset('frontEnd/js/jquery.easing.1.3.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/bootstrap.min.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/jquery.fancybox.pack.js') }}"></script>
@@ -35,6 +27,26 @@
 <script src="{{ URL::asset('frontEnd/js/animate.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/custom.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/owl-carousel/owl.carousel.js') }}"></script>
+
+@if (isset($Topic))
+
+@if ( strlen($Topic->attach_file) > 0 && strpos($Topic->attach_file, '.pdf' ))
+
+<script src="{{ URL::asset('frontEnd/js/flipbook.min.js') }}"></script>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#xem-pdf").flipBook({
+            pdfUrl:"/uploads/topics/{{ $Topic->attach_file }}",
+        });
+
+    })
+</script>
+
+@endif
+
 
 
 

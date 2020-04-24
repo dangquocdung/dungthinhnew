@@ -9,6 +9,8 @@
 <link href="{{ URL::asset('frontEnd/css/fancybox/jquery.fancybox.css') }}" rel="stylesheet">
 <link href="{{ URL::asset('frontEnd/css/jcarousel.css') }}" rel="stylesheet"/>
 <link href="{{ URL::asset('frontEnd/css/flexslider.css') }}" rel="stylesheet"/>
+<link href="{{ URL::asset('frontEnd/css/flexslider.style.css') }}" rel="stylesheet"/>
+
 <link href="{{ URL::asset('frontEnd/css/style.css') }}" rel="stylesheet"/>
 <link href="{{ URL::asset('frontEnd/css/color.css') }}" rel="stylesheet"/>
 <link rel="stylesheet" href="{{ URL::asset('frontEnd/js/owl-carousel/assets/owl.carousel.min.css') }}">
@@ -55,11 +57,7 @@
 <meta property="og:description" content="{{$PageDescription}}"/>
 <meta property="og:url" content="{{ url()->full()  }}"/>
 <meta property="og:type" content="website"/>
-<link rel="stylesheet" type="text/css" href="{{ URL::asset('frontEnd/css/flipbook.style.css') }}">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-<script src="{{ URL::asset('frontEnd/js/flipbook.min.js') }}"></script>
 
 {{-- Google Tags and google analytics --}}
 @if($WebmasterSettings->google_tags_status && $WebmasterSettings->google_tags_id !="")
