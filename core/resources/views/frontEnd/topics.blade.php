@@ -392,7 +392,7 @@
                                             @endif
                                             {{--End of -- Additional Feilds--}}
 
-                                            <p>{!! mb_substr(strip_tags($Topic->$details),0, 300)."..." !!}</p>
+                                            <p>{!! mb_substr(strip_tags($Topic->$details),0,1000)."..." !!}</p>
 
                                             
                                             <div class="bottom-article">
