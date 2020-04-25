@@ -62,7 +62,7 @@
                                 ?>
 
                                 @if($WebmasterSection!="none")
-                                    @if (@$WebmasterSection->name = "eBook") {
+                                    @if (@$WebmasterSection->name = "eBook")
                                     @else
                                         @foreach($Topics as $Topic)
                                             <?php
