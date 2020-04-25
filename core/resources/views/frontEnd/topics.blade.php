@@ -120,11 +120,9 @@
                                                     $section = "";
                                                 }
 
+                                                $i=0;
+
                                                 // set row div
-                                                if (($i == 1 && count($Categories) > 0) || ($i == 2 && count($Categories) == 0)) {
-                                                    $i = 0;
-                                                    echo "</div><div class='row'>";
-                                                }
                                                 $topic_link_url = Helper::topicURL($Topic->id);
                                             ?>
 
@@ -135,7 +133,9 @@
                                                     <div class="thumb book-{{ $Topic->id }}">
                                                         <img src="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}" alt="{{ $title }}"/>
                                                     </div>
-                                            @if ($key%5==0)
+                                                    <?php $i++; ?>
+                                            @if ($i%5==0)
+                                                <?php $i=0; ?>
                                                 </div>
                                                 <img class="shelf-img" src="images/shelf_wood.png">
                                             </div>
