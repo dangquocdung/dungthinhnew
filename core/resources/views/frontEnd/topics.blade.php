@@ -97,6 +97,7 @@
                                             }
                                         </style>
 
+
                                         @foreach($Topics as $key=>$Topic)
                                             <?php
                                                 if ($Topic->$title_var != "") {
@@ -119,8 +120,7 @@
                                                 } catch (Exception $e) {
                                                     $section = "";
                                                 }
-
-                                                $i=0;
+                                                
 
                                                 // set row div
                                                 $topic_link_url = Helper::topicURL($Topic->id);
