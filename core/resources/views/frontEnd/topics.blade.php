@@ -63,6 +63,73 @@
 
                                 @if($WebmasterSection!="none")
                                     @if (@$WebmasterSection->name = "eBook")
+                                        <style type="text/css">
+                                            .bookshelf .thumb{
+                                                display: inline-block;
+                                                cursor: pointer; 
+                                                margin: 0px 0.5%; 
+                                                width: 15% !important; 
+                                                box-shadow:0px 1px 3px rgba(0,0,0,.3);
+                                                max-width:100px;
+                                            }
+                                            .bookshelf .thumb img{
+                                                width:100%; 
+                                                display:block; 
+                                                vertical-align:top;
+                                            }
+                                            .bookshelf .shelf-img{
+                                                z-index:0; 
+                                                height: auto; 
+                                                max-width: 100%; 
+                                                vertical-align: top; 
+                                                margin-top:-12px; 
+                                            }
+                                            .bookshelf .covers{
+                                                width:100%; 
+                                                height:auto; 
+                                                z-index: 99; 
+                                                position: relative;
+                                                text-align:center;
+                                            }
+                                            .bookshelf{
+                                                text-align: center;
+                                                padding:0px;
+                                            }
+                                        </style>
+
+                                            <div class="bookshelf">
+                                                <div class="covers">
+                                                    <div class="thumb book-1"><img src="/images/book2/thumb1.jpg"></div>
+                                                    <div class="thumb book-2"><img src="/images/book2/thumb1.jpg"></div>
+                                                    <div class="thumb book-3"><img src="/images/book2/thumb1.jpg"></div>
+                                                    <div class="thumb book-4"><img src="/images/book2/thumb1.jpg"></div>
+                                                    <div class="thumb book-4"><img src="/images/book2/thumb1.jpg"></div>
+                                                </div>
+                                                <img class="shelf-img" src="images/shelf_wood.png">
+                                            </div>
+
+                                            <div class="bookshelf">
+                                                <div class="covers">
+                                                    <div class="thumb book-1"><img src="images/book2/thumb1.jpg"></div>
+                                                    <div class="thumb book-2"><img src="images/book2/thumb1.jpg"></div>
+                                                    <div class="thumb book-3"><img src="images/book2/thumb1.jpg"></div>
+                                                </div>
+                                                <img class="shelf-img"  src="images/shelf_glass.png">
+                                            </div>
+
+                                            <div class="bookshelf">
+                                                <div class="covers">
+                                                    <div class="thumb book-1"><img src="images/book2/thumb1.jpg"></div>
+                                                    <div class="thumb book-2"><img src="images/book2/thumb1.jpg"></div>
+                                                    <div class="thumb book-3"><img src="images/book2/thumb1.jpg"></div>
+                                                    <div class="thumb book-4"><img src="images/book2/thumb1.jpg"></div>
+                                                </div>
+                                                <img class="shelf-img" src="images/shelf_metal.png">
+                                            </div>
+
+
+
+
                                     @else
                                         @foreach($Topics as $Topic)
                                             <?php
