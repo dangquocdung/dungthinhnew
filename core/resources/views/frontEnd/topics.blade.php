@@ -97,69 +97,81 @@
                                             }
                                         </style>
 
+                                        @foreach($Topics as $key=>$Topic)
+                                            <?php
+                                                if ($Topic->$title_var != "") {
+                                                    $title = $Topic->$title_var;
+                                                } else {
+                                                    $title = $Topic->$title_var2;
+                                                }
+                                                if ($Topic->$details_var != "") {
+                                                    $details = $details_var;
+                                                } else {
+                                                    $details = $details_var2;
+                                                }
+                                                $section = "";
+                                                try {
+                                                    if ($Topic->section->$title_var != "") {
+                                                        $section = $Topic->section->$title_var;
+                                                    } else {
+                                                        $section = $Topic->section->$title_var2;
+                                                    }
+                                                } catch (Exception $e) {
+                                                    $section = "";
+                                                }
+
+                                                // set row div
+                                                if (($i == 1 && count($Categories) > 0) || ($i == 2 && count($Categories) == 0)) {
+                                                    $i = 0;
+                                                    echo "</div><div class='row'>";
+                                                }
+                                                $topic_link_url = Helper::topicURL($Topic->id);
+                                            ?>
+
+                                            @if ($key%5==0)
                                             <div class="bookshelf">
                                                 <div class="covers">
-                                                    <div class="thumb book-1"><img src="/images/book2/thumb1.jpg"></div>
-                                                    <div class="thumb book-2"><img src="/images/book2/thumb1.jpg"></div>
-                                                    <div class="thumb book-3"><img src="/images/book2/thumb1.jpg"></div>
-                                                    <div class="thumb book-4"><img src="/images/book2/thumb1.jpg"></div>
-                                                    <div class="thumb book-4"><img src="/images/book2/thumb1.jpg"></div>
+                                            @endif
+                                                    <div class="thumb book-{{ $Topic->id }}">
+                                                        <img src="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}" alt="{{ $title }}"/>
+                                                    </div>
+                                            @if ($key%5==0)
                                                 </div>
                                                 <img class="shelf-img" src="images/shelf_wood.png">
                                             </div>
+                                            @endif
 
-                                            <div class="bookshelf">
-                                                <div class="covers">
-                                                    <div class="thumb book-1"><img src="images/book2/thumb1.jpg"></div>
-                                                    <div class="thumb book-2"><img src="images/book2/thumb1.jpg"></div>
-                                                    <div class="thumb book-3"><img src="images/book2/thumb1.jpg"></div>
-                                                </div>
-                                                <img class="shelf-img"  src="images/shelf_glass.png">
-                                            </div>
-
-                                            <div class="bookshelf">
-                                                <div class="covers">
-                                                    <div class="thumb book-1"><img src="images/book2/thumb1.jpg"></div>
-                                                    <div class="thumb book-2"><img src="images/book2/thumb1.jpg"></div>
-                                                    <div class="thumb book-3"><img src="images/book2/thumb1.jpg"></div>
-                                                    <div class="thumb book-4"><img src="images/book2/thumb1.jpg"></div>
-                                                </div>
-                                                <img class="shelf-img" src="images/shelf_metal.png">
-                                            </div>
-
-
-
-
+                                        @endforeach
                                     @else
                                         @foreach($Topics as $Topic)
                                             <?php
-                                            if ($Topic->$title_var != "") {
-                                                $title = $Topic->$title_var;
-                                            } else {
-                                                $title = $Topic->$title_var2;
-                                            }
-                                            if ($Topic->$details_var != "") {
-                                                $details = $details_var;
-                                            } else {
-                                                $details = $details_var2;
-                                            }
-                                            $section = "";
-                                            try {
-                                                if ($Topic->section->$title_var != "") {
-                                                    $section = $Topic->section->$title_var;
+                                                if ($Topic->$title_var != "") {
+                                                    $title = $Topic->$title_var;
                                                 } else {
-                                                    $section = $Topic->section->$title_var2;
+                                                    $title = $Topic->$title_var2;
                                                 }
-                                            } catch (Exception $e) {
+                                                if ($Topic->$details_var != "") {
+                                                    $details = $details_var;
+                                                } else {
+                                                    $details = $details_var2;
+                                                }
                                                 $section = "";
-                                            }
+                                                try {
+                                                    if ($Topic->section->$title_var != "") {
+                                                        $section = $Topic->section->$title_var;
+                                                    } else {
+                                                        $section = $Topic->section->$title_var2;
+                                                    }
+                                                } catch (Exception $e) {
+                                                    $section = "";
+                                                }
 
-                                            // set row div
-                                            if (($i == 1 && count($Categories) > 0) || ($i == 2 && count($Categories) == 0)) {
-                                                $i = 0;
-                                                echo "</div><div class='row'>";
-                                            }
-                                            $topic_link_url = Helper::topicURL($Topic->id);
+                                                // set row div
+                                                if (($i == 1 && count($Categories) > 0) || ($i == 2 && count($Categories) == 0)) {
+                                                    $i = 0;
+                                                    echo "</div><div class='row'>";
+                                                }
+                                                $topic_link_url = Helper::topicURL($Topic->id);
                                             ?>
                                             <div class="col-lg-{{(count($Categories)>0)? "12":"6"}}">
 
@@ -212,7 +224,6 @@
                                                                         Your browser does not support the video tag.
                                                                     </video>
                                                                 @endif
-
 
                                                             </div>
                                                         </div>
@@ -313,7 +324,6 @@
                                                                         } else {
                                                                             $cf_title = $customField->$cf_title_var2;
                                                                         }
-
 
                                                                         $cf_saved_val = "";
                                                                         $cf_saved_val_array = array();
@@ -464,7 +474,6 @@
 
                                                     <p>{!! mb_substr(strip_tags($Topic->$details),0,1000)."..." !!}</p>
 
-                                                    
                                                     <div class="bottom-article">
                                                         <ul class="meta-post">
                                                             @if($Topic->webmasterSection->date_status)
