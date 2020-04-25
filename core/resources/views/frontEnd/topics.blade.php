@@ -132,7 +132,9 @@
                                                 <div class="covers">
                                             @endif
                                                     <div class="thumb book-{{ $Topic->id }}">
-                                                        <img src="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}" alt="{{ $title }}"/>
+                                                        <a href="{{ $topic_link_url }}">
+                                                            <img src="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}" alt="{{ $title }}"/>
+                                                        </a>
                                                     </div>
                                                     <?php $i++; ?>
                                             @if ($i%5==0 || $key==($Topics->count()-1))
