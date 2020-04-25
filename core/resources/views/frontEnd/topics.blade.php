@@ -134,7 +134,7 @@
                                                         <img src="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}" alt="{{ $title }}"/>
                                                     </div>
                                                     <?php $i++; ?>
-                                            @if ($i%5==0)
+                                            @if ($i%5==0 || $key==$Topics->count())
                                                 <?php $i=0; ?>
                                                 </div>
                                                 <img class="shelf-img" src="images/shelf_wood.png">
