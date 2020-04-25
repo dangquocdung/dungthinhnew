@@ -152,7 +152,6 @@
                                                 @endswitch
                                                 <?php $x++; ?>
 
-                                                <img class="shelf-img" src="images/shelf_wood.png">
                                             </div>
                                             @endif
 
