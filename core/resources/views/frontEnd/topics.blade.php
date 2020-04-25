@@ -59,6 +59,7 @@
                                     $slug_var = "seo_url_slug_" . @Helper::currentLanguage()->code;
                                     $slug_var2 = "seo_url_slug_" . env('DEFAULT_LANGUAGE');
                                     $i = 0;
+                                    $x = 0;
                                 ?>
 
                                 @if($WebmasterSection!="none")
@@ -137,6 +138,20 @@
                                             @if ($i%5==0 || $key==($Topics->count()-1))
                                                 <?php $i=0; ?>
                                                 </div>
+
+                                                @switch($x%3)
+                                                    @case(0)
+                                                        <img class="shelf-img" src="images/shelf_wood.png">
+                                                        @break
+                                                    @case(1)
+                                                        <img class="shelf-img" src="images/shelf_glass.png">
+                                                        @break
+                                                    @case(2)
+                                                        <img class="shelf-img" src="images/shelf_metal.png">
+                                                        @break
+                                                @endswitch
+                                                <?php $x++; ?>
+
                                                 <img class="shelf-img" src="images/shelf_wood.png">
                                             </div>
                                             @endif
