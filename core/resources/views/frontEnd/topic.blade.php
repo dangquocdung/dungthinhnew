@@ -452,7 +452,7 @@
                                              alt="{{ $title }}"/>
                                     </div>
                                 @else
-                                    <div id="xem-pdf"></div>
+                                    <div id="container"></div>
                                 @endif
                             </div>
                         @endif

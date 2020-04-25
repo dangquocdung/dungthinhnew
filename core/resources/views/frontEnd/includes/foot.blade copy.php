@@ -22,7 +22,7 @@
 @if ( strlen($Topic->attach_file) > 0 && strpos($Topic->attach_file, '.pdf' ))
 <script type="text/javascript">
     $(document).ready(function () {
-        $("#xem-pdf").flipBook({
+        $("#container").flipBook({
             pdfUrl:"/uploads/topics/{{ $Topic->attach_file }}",
         });
 
