@@ -108,14 +108,6 @@
                                         </button>
                                     @endif
 
-                                    <form action="{{ route('send-push') }}" method="post">
-                                        @csrf
-                                        <input type="hidden" name="id" value="{{$User->id}}" />
-
-                                        <input class="btn btn-primary" type="submit" value="Send Push">
-                                    </form>
-
-
                                 </td>
                             </tr>
                             <!-- .modal -->
