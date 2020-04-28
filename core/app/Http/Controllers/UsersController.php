@@ -23,10 +23,28 @@ class UsersController extends Controller
     {
         $this->middleware('auth');
 
+        $this->serverKey = config('app.firebase_server_key');
+
         // Check Permissions
         if (@Auth::user()->permissions != 0 && Auth::user()->permissions != 1) {
             return Redirect::to(route('NoPermission'))->send();
         }
+    }
+
+    public function saveToken (Request $request)
+    {
+        $user = User::find($request->user_id);
+        $user->device_token = $request->fcm_token;
+        $user->save();
+
+        if($user)
+            return response()->json([
+                'message' => 'User token updated'
+            ]);
+
+        return response()->json([
+            'message' => 'Error!'
+        ]);
     }
 
     /**
