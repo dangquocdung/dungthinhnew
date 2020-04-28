@@ -196,6 +196,9 @@
                                          alt="{{ $title }}" title="{{ $title }}"/>
                                 @endif
                             </div>
+
+                            <div id="container" height="480px"></div>
+
                         @endif
 
                         {{--Additional Feilds--}}
