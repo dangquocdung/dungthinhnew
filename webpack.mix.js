@@ -34,7 +34,7 @@ mix.webpackConfig({
                 handler: 'cacheFirst'
             },
             {
-                urlPattern: /^https:\/\/www\.dungthinh\.com\/images\/media\/drink\/(\w+)\.jpg/,
+                urlPattern: /^https:\/\/www\.dungthinh\.com\/images\/logo\/(\w+)\.png/,
                 handler: 'cacheFirst'
             }
         ],
