@@ -452,12 +452,14 @@
                                     </div>   
 
                                 @else
-                                    <a href="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}">
+                                    <a onclick="window.open('http://www.codecanyon.net/user/zlac', '_blank')">
                                         <strong>
                                             {!! Helper::GetIcon(URL::to('uploads/topics/'),$Topic->attach_file) !!}
                                             &nbsp;{{ __('frontend.downloadAttach') }}</strong>
                                     </a>
                                 @endif
+
+
 
                             </div>
                         @endif
