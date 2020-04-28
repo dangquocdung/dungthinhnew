@@ -459,15 +459,15 @@
                             $file_ext = strrchr($Topic->attach_file, ".");
                             $file_ext = strtolower($file_ext);
                             ?>
-                            <div class="bottom-article">
                                 @if($file_ext ==".jpg"|| $file_ext ==".jpeg"|| $file_ext ==".png"|| $file_ext ==".gif")
+                                <div class="bottom-article">
                                     <div class="text-center">
                                         <img src="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}"
                                              alt="{{ $title }}"/>
                                     </div>   
+                                </div>
                                 @endif
 
-                            </div>
                         @endif
 
                         {{-- Show Additional attach files --}}
