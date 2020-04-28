@@ -201,7 +201,22 @@
                                         @if($Topic->icon !="")
                                             <i class="fa {!! $Topic->icon !!} "></i>&nbsp;
                                         @endif
-                                        {{ $title }}
+                                        @if($Topic->attach_file !="")
+                                            <?php
+                                            $file_ext = strrchr($Topic->attach_file, ".");
+                                            $file_ext = strtolower($file_ext);
+                                            ?>
+                                            @if($file_ext ==".pdf")
+
+                                                <a href="{{ route('FileTopic',['filename'=>$Topic->attach_file]) }}">
+                                                    {{ $title }}
+                                                </a>
+                                            @else
+                                                {{ $title }}
+                                            @endif
+                                        @else
+                                            {{ $title }}
+                                        @endif
                                     </h1>
                                 </div>
                                 @if($Topic->photo_file !="")
