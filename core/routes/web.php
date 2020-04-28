@@ -12,6 +12,7 @@
 */
 
 
+Route::view('/offline','offline');
 
 // Language Route
 Route::post('/lang', array(
