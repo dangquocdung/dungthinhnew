@@ -125,7 +125,12 @@
 
 <script>
     if ('serviceWorker' in navigator) {
-    a
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('{{ url('sw.js') }}')
+                .then((reg) => {
+                console.log('Service worker registered.', reg);
+                });
+        });
     }
 </script>
 
