@@ -26,7 +26,7 @@ if (Helper::GeneralSiteSettings("style_type")) {
 }
 ?>
 
-<body class="js {!!  $bdy_class !!}" style=" {!!  $bdy_bg_color !!} {!! $bdy_bg_image !!}" oncontextmenu="return false;">
+<body class="js {!!  $bdy_class !!}" style=" {!!  $bdy_bg_color !!} {!! $bdy_bg_image !!}">
 <div id="wrapper">
     <!-- start header -->
 @include('frontEnd.includes.header')
