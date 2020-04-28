@@ -208,7 +208,7 @@
                                             ?>
                                             @if($file_ext ==".pdf")
 
-                                                <a href="{{ route('FileTopic',['filename'=>$Topic->attach_file]) }}">
+                                                <a href="{{ route('FileTopic',['filename'=>$Topic->attach_file]) }}" target="_blank">
                                                     {{ $title }}
                                                 </a>
                                             @else
