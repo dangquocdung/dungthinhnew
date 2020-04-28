@@ -128,7 +128,7 @@
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('{{ url('sw.js') }}')
                 .then((reg) => {
-                console.log('Service worker registered.', reg);
+                    console.log('Service worker registered.', reg);
                 });
         });
     }
