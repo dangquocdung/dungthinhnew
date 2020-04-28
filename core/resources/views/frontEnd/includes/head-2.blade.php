@@ -39,17 +39,6 @@
     <link href="{{ URL::asset('uploads/settings/nofav.png') }}" rel="apple-touch-icon" sizes="144x144">
 @endif
 
-<meta property='og:title'
-      content='{{$PageTitle}} {{($PageTitle =="")? Helper::GeneralSiteSettings("site_title_" . trans('backLang.boxCode')):""}}'/>
-@if(@$Topic->photo_file !="")
-    <meta property='og:image' content='{{ URL::asset('uploads/topics/'.@$Topic->photo_file) }}'/>
-@elseif(Helper::GeneralSiteSettings("style_apple") !="")
-    <meta property='og:image'
-          content='{{ URL::asset('uploads/settings/'.Helper::GeneralSiteSettings("style_apple")) }}'/>
-@else
-    <meta property='og:image'
-          content='{{ URL::asset('uploads/settings/nofav.png') }}'/>
-@endif
 <meta property="og:site_name" content="{{ Helper::GeneralSiteSettings("site_title_" . trans('backLang.boxCode')) }}">
 <meta property="og:url" content="{{ url()->full()  }}"/>
 <meta property="og:type" content="website"/>
