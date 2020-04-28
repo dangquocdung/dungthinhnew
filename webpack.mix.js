@@ -19,7 +19,6 @@ mix.webpackConfig({
         filename: 'service-worker.js',
         staticFileGlobs: ['frontEnd/**/*.{css,eot,svg,ttf,woff,woff2,js,html}'],
         minify: true,
-        stripPrefix: 'frontEnd/',
         handleFetch: true,
         dynamicUrlToDependencies: { //you should add the path to your blade files here so they can be cached
                //and have full support for offline first (example below)
