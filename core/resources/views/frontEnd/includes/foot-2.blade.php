@@ -18,6 +18,15 @@
 <script src="{{ URL::asset('frontEnd/js/animate.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/custom.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/owl-carousel/owl.carousel.js') }}"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#container").flipBook({
+            pdfUrl:"/uploads/topics/{{ $filename }}",
+        });
+
+    })
+</script>
+
 {{--ajax subscribe to news letter--}}
 @if(Helper::GeneralSiteSettings("style_subscribe"))
     <script type="text/javascript">
