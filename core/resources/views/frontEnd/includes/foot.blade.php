@@ -18,18 +18,6 @@
 <script src="{{ URL::asset('frontEnd/js/animate.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/custom.js') }}"></script>
 <script src="{{ URL::asset('frontEnd/js/owl-carousel/owl.carousel.js') }}"></script>
-@if (isset($Topic))
-@if ( strlen($Topic->attach_file) > 0 && strpos($Topic->attach_file, '.pdf' ))
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#container").flipBook({
-            pdfUrl:"/uploads/topics/{{ $Topic->attach_file }}",
-        });
-
-    })
-</script>
-@endif
-@endif
 {{--ajax subscribe to news letter--}}
 @if(Helper::GeneralSiteSettings("style_subscribe"))
     <script type="text/javascript">

@@ -360,6 +360,10 @@ Route::post('/search', 'FrontendHomeController@searchTopics')->name('searchTopic
 Route::get('/{section}/topic/{id}', 'FrontendHomeController@topic')->name('FrontendTopic');
 Route::get('/{lang?}/{section}/topic/{id}', 'FrontendHomeController@topicByLang')->name('FrontendTopicByLang');
 
+// ..Flipbook
+
+Route::get('/doc-sach/{filename}', 'FrontendHomeController@topicFilename')->name('FileTopic');
+
 // ..Sub category url for Section  ( ex: www.site.com/products/2 )
 Route::get('/{section}/{cat}', 'FrontendHomeController@topics')->name('FrontendTopicsByCat');
 Route::get('/{lang?}/{section}/{cat}', 'FrontendHomeController@topicsByLang')->name('FrontendTopicsByCatWithLang');

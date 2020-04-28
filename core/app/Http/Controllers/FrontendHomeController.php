@@ -295,6 +295,20 @@ class FrontendHomeController extends Controller
         }
     }
 
+        /**
+     * Show the form for editing the specified resource.
+     *
+     * @param int $section
+     * @param int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function topicFilename($filename)
+    {
+        return view("frontEnd.topic-flipbook",compact("filename"));
+        
+    }
+
+
     /**
      * Show the form for editing the specified resource.
      *
