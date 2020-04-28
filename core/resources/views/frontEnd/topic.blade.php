@@ -452,7 +452,7 @@
                                              alt="{{ $title }}"/>
                                     </div>
                                 @else
-                                    <div id="container"></div>
+                                    <div id="container" style="position:absolute;width:60%;height:60%"></div>
                                 @endif
                             </div>
                         @endif
