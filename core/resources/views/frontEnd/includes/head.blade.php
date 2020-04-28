@@ -15,6 +15,8 @@
 <link href="{{ URL::asset('frontEnd/css/color.css') }}" rel="stylesheet"/>
 <link rel="stylesheet" href="{{ URL::asset('frontEnd/js/owl-carousel/assets/owl.carousel.min.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('frontEnd/js/owl-carousel/assets/owl.theme.default.min.css') }}">
+<link rel="manifest" href="{{ URL::asset('/manifest.json')}}">
+
 
 @if( @Helper::currentLanguage()->direction=="rtl")
     <link href="{{ URL::asset('frontEnd/css/rtl.css') }}" rel="stylesheet"/>
