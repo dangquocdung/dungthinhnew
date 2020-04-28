@@ -59,7 +59,8 @@
                             }
                             ?>
                             <li class="active"><i
-                                    class="icon-angle-right"></i>{{ $CurrentCategoryTitle }}</li>
+                                class="icon-angle-right"></i>{{ $CurrentCategoryTitle }}
+                            </li>
                         @endif
                     </ul>
                 </div>
@@ -73,10 +74,20 @@
             <div class="row">
                 <div class="col-lg-{{(count($Categories)>0)? "8":"12"}}">
 
-                    <div class="embed-responsive embed-responsive-16by9">
+                    @if($Topic->attach_file !="")
+                        <?php
+                        $file_ext = strrchr($Topic->attach_file, ".");
+                        $file_ext = strtolower($file_ext);
+                        ?>
+                        @if($file_ext ==".pdf")
+                            <div class="embed-responsive embed-responsive-16by9">
 
-                        <iframe class="embed-responsive-item" src="https://www.dungthinh.com/flipbook/deploy/fullscreen.html" frameborder="0" height="480px" width="100%"></iframe>
-                    </div>
+                                <iframe class="embed-responsive-item" src="https://www.dungthinh.com/flipbook/deploy/fullscreen.html" frameborder="0" height="480px" width="100%"></iframe>
+                            </div>
+
+                        @endif
+
+                    @endif
 
                     <article>
                         @if($WebmasterSection->type==2 && $Topic->video_file!="")
@@ -457,17 +468,7 @@
                                         <img src="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}"
                                              alt="{{ $title }}"/>
                                     </div>   
-
-                                @else
-                                    <a onclick="window.open('http://www.codecanyon.net/user/zlac', '_blank')">
-                                        <strong>
-                                            {!! Helper::GetIcon(URL::to('uploads/topics/'),$Topic->attach_file) !!}
-                                            &nbsp;{{ __('frontend.downloadAttach') }}</strong>
-                                    </a>
                                 @endif
-
-
-
 
                             </div>
                         @endif
