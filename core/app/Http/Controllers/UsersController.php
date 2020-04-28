@@ -31,6 +31,12 @@ class UsersController extends Controller
         }
     }
 
+     /**
+     * Firebase save device token.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
     public function saveToken (Request $request)
     {
         $user = User::find($request->user_id);
@@ -45,6 +51,43 @@ class UsersController extends Controller
         return response()->json([
             'message' => 'Error!'
         ]);
+    }
+
+     /**
+     * Firebase push notification.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function sendPush (Request $request)
+    {
+        $user = User::find($request->id);
+        $data = [
+            "to" => $user->device_token,
+            "notification" =>
+                [
+                    "title" => 'Web Push',
+                    "body" => "Sample Notification",
+                    "icon" => url('/logo.png')
+                ],
+        ];
+        $dataString = json_encode($data);
+
+        $headers = [
+            'Authorization: key=' . $this->serverKey,
+            'Content-Type: application/json',
+        ];
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send');
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $dataString);
+
+        curl_exec($ch);
+
+        return redirect('/home')->with('message', 'Notification sent!');
     }
 
     /**

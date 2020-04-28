@@ -332,7 +332,10 @@ Route::Group(['prefix' => '/api/v1'], function () {
 // Frontend Routes
 
 //FCM save device token
-Route::post('/save-device-token', 'UsersController@saveToken');
+Route::post('/save-device-token', 'UsersController@saveToken')->name('save-device-token');
+
+Route::post('/send-push', 'UsersController@sendPush')->name('send-push');
+
 
 // ../site map
 Route::get('/sitemap.xml', 'SiteMapController@siteMap')->name('siteMap');
