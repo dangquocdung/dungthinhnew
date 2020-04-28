@@ -172,7 +172,7 @@
                     url: '{{ URL::to('/save-device-token') }}',
                     type: 'POST',
                     data: {
-                        user_id: {!! json_encode($user_id ?? '') !!},
+                        user_id: {!! json_encode(Auth::user()->id ?? '') !!},
                         fcm_token: token
                     },
                     dataType: 'JSON',
