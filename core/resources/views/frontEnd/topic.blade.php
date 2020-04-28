@@ -68,11 +68,12 @@
     </section>
     
     <section id="content">
-        <iframe src="https://www.dungthinh.com/flipbook/deploy/fullscreen.html" frameborder="0"></iframe>
 
         <div class="container">
             <div class="row">
                 <div class="col-lg-{{(count($Categories)>0)? "8":"12"}}">
+                    <iframe src="https://www.dungthinh.com/flipbook/deploy/fullscreen.html" frameborder="0" width="100%"></iframe>
+
                     <article>
                         @if($WebmasterSection->type==2 && $Topic->video_file!="")
                             {{--video--}}
