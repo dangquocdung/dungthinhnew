@@ -5,6 +5,12 @@
         @include('backEnd.users.permissions.view')
     @endif
 
+    @if(Session::has('message'))
+        <div class="alert alert-success">
+            {{session('message')}}
+        </div>
+    @endif
+
     <div class="padding">
         <div class="box">
 
