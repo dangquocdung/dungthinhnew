@@ -29,11 +29,7 @@ mix.webpackConfig({
         navigateFallback: '/',
         runtimeCaching: [
             {
-                urlPattern: /^https:\/\/fonts\.googleapis\.com\//,
-                handler: 'cacheFirst'
-            },
-            {
-                urlPattern: /^https:\/\/www\.dungthinh\.com\/images\/logo\/(\w+)\.png/,
+                urlPattern: '/',
                 handler: 'cacheFirst'
             }
         ],
