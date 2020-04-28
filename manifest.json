@@ -45,7 +45,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://dungthinh.com",
+  "start_url": "/?launcher=true",
   "display": "standalone",
   "background_color": "#000",
   "theme_color": "#111"
