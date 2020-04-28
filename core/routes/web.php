@@ -330,6 +330,10 @@ Route::Group(['prefix' => '/api/v1'], function () {
 
 
 // Frontend Routes
+
+//FCM save device token
+Route::post('/save-device-token', 'UsersController@saveToken');
+
 // ../site map
 Route::get('/sitemap.xml', 'SiteMapController@siteMap')->name('siteMap');
 Route::get('/{lang}/sitemap', 'SiteMapController@siteMap')->name('siteMapByLang');
