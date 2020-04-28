@@ -87,7 +87,7 @@ class UsersController extends Controller
 
         curl_exec($ch);
 
-        return redirect('/home')->with('message', 'Notification sent!');
+        return redirect()->back()->with('message', 'Notification sent!');
     }
 
     /**
