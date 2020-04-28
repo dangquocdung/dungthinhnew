@@ -8,7 +8,7 @@
 
     @yield('content')
  
-    @include('frontEnd.includes.foot')
+    @include('frontEnd.includes.foot-2')
 
 </body>
 </html>
