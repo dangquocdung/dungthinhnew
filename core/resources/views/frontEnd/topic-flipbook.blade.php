@@ -6,7 +6,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $("#container").flipBook({
-            pdfUrl:"/uploads/topics/{{ $Filename }}",
+            pdfUrl:"/uploads/topics/{{ $filename }}",
         });
 
     })
