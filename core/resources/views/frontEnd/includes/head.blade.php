@@ -59,7 +59,7 @@
 <meta property="og:description" content="{{$PageDescription}}"/>
 <meta property="og:url" content="{{ url()->full()  }}"/>
 <meta property="og:type" content="website"/>
-
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 {{-- Google Tags and google analytics --}}
 @if($WebmasterSettings->google_tags_status && $WebmasterSettings->google_tags_id !="")
