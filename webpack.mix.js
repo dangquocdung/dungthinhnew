@@ -17,7 +17,7 @@ mix.webpackConfig({
     new SWPrecacheWebpackPlugin({
         cacheId: 'pwa',
         filename: 'service-worker.js',
-        staticFileGlobs: ['frontEnd/**/*.{css,eot,svg,ttf,woff,woff2,js,html}'],
+        staticFileGlobs: ['/frontEnd/**/*.{css,eot,svg,ttf,woff,woff2,js,html}'],
         minify: true,
         handleFetch: true,
         dynamicUrlToDependencies: { //you should add the path to your blade files here so they can be cached
