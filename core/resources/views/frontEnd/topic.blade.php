@@ -72,6 +72,8 @@
             <div class="row">
                 <div class="col-lg-{{(count($Categories)>0)? "8":"12"}}">
 
+                    <div id="container" style="position:absolute;width:60%;height:60%"></div>
+
                     <article>
                         @if($WebmasterSection->type==2 && $Topic->video_file!="")
                             {{--video--}}
@@ -450,9 +452,7 @@
                                     <div class="text-center">
                                         <img src="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}"
                                              alt="{{ $title }}"/>
-                                    </div>
-                                @else
-                                    <div id="container" style="position:absolute;width:60%;height:60%"></div>
+                                    </div>                                    
                                 @endif
                             </div>
                         @endif
