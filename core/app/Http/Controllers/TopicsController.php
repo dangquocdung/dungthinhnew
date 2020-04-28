@@ -256,7 +256,7 @@ class TopicsController extends Controller
                 }
             }
 
-            window.close();
+            return redirect()->back();
 
 
             return redirect()->action('TopicsController@edit', [$webmasterId, $Topic->id])->with('doneMessage',
