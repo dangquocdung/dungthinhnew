@@ -73,6 +73,8 @@
             <div class="row">
                 <div class="col-lg-{{(count($Categories)>0)? "8":"12"}}">
 
+                    <iframe src="https://www.dungthinh.com/flipbook/deploy/fullscreen.html" frameborder="0" height="480px"></iframe>
+
                     <article>
                         @if($WebmasterSection->type==2 && $Topic->video_file!="")
                             {{--video--}}
@@ -196,9 +198,6 @@
                                          alt="{{ $title }}" title="{{ $title }}"/>
                                 @endif
                             </div>
-
-                            <div id="container" height="480px"></div>
-
                         @endif
 
                         {{--Additional Feilds--}}
