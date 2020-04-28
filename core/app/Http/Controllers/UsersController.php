@@ -67,7 +67,7 @@ class UsersController extends Controller
                 [
                     "title" => 'Web Push',
                     "body" => "Sample Notification",
-                    "icon" => url('/logo.png')
+                    "icon" => url('/firebase_logo.png')
                 ],
         ];
         $dataString = json_encode($data);
