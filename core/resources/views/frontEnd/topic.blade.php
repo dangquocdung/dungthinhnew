@@ -84,7 +84,6 @@
                                 <iframe class="embed-responsive-item" src="https://www.dungthinh.com/flipbook/deploy/fullscreen.html" frameborder="0" height="480px" width="100%"></iframe>
                             </div>
                         @endif
-
                     @endif
 
                     <article>
