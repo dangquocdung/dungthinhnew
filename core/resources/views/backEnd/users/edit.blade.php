@@ -142,6 +142,15 @@
                 </div>
 
                 {{Form::close()}}
+
+                <form action="{{ route('send-push') }}" method="post">
+                    @csrf
+                    <input type="hidden" name="id" value="{{$Users->id}}" />
+
+                    <input class="btn btn-primary" type="submit" value="Send Push">
+                </form>
+
+
             </div>
         </div>
     </div>
