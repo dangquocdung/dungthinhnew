@@ -140,25 +140,60 @@
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
-
 <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBAymroWpXvhz2yceUzBu_v8-1j7AmXH54",
-    authDomain: "dungthinh-app.firebaseapp.com",
-    databaseURL: "https://dungthinh-app.firebaseio.com",
-    projectId: "dungthinh-app",
-    storageBucket: "dungthinh-app.appspot.com",
-    messagingSenderId: "821302224629",
-    appId: "1:821302224629:web:f864805ec9f789e96307bc",
-    measurementId: "G-REZ324YS0Z"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+    $(document).ready(function(){
+        const config = {
+            apiKey: "AIzaSyBAymroWpXvhz2yceUzBu_v8-1j7AmXH54",
+            authDomain: "dungthinh-app.firebaseapp.com",
+            databaseURL: "https://dungthinh-app.firebaseio.com",
+            projectId: "dungthinh-app",
+            storageBucket: "dungthinh-app.appspot.com",
+            messagingSenderId: "821302224629",
+            appId: "1:821302224629:web:f864805ec9f789e96307bc",
+        };
+        firebase.initializeApp(config);
+        const messaging = firebase.messaging();
+        
+        messaging
+            .requestPermission()
+            .then(function () {
+                return messaging.getToken()
+            })
+            .then(function(token) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: '{{ URL::to('/save-device-token') }}',
+                    type: 'POST',
+                    data: {
+                        user_id: {!! json_encode($user_id ?? '') !!},
+                        fcm_token: token
+                    },
+                    dataType: 'JSON',
+                    success: function (response) {
+                        console.log(response)
+                    },
+                    error: function (err) {
+                        console.log(" Can't do because: " + err);
+                    },
+                });
+            })
+            .catch(function (err) {
+                console.log("Unable to get permission to notify.", err);
+            });
+    
+        messaging.onMessage(function(payload) {
+            const noteTitle = payload.notification.title;
+            const noteOptions = {
+                body: payload.notification.body,
+                icon: payload.notification.icon,
+            };
+            new Notification(noteTitle, noteOptions);
+        });
+    });
 </script>
 
 <?php
@@ -213,5 +248,3 @@ if ($PageTitle == "") {
     }
   };
 </script>
-
-
