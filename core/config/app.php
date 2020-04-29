@@ -13,7 +13,10 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'SmartEnd'),
+    'name' => env('APP_NAME', 'DungThinh'),
+
+
+    'firebase_server_key' => env('FIREBASE_SERVER_KEY'),
 
     /*
     |--------------------------------------------------------------------------
