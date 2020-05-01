@@ -488,7 +488,6 @@
                                     </a>
                                 @endif
 
-                                @endif
 
                         @endif
 
