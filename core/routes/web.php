@@ -370,9 +370,11 @@ Route::get('/{lang?}/{section}/topic/{id}', 'FrontendHomeController@topicByLang'
 
 // ..Flipbook
 
+Route::get('/doc-sach/epub', 'FrontendHomeController@topicBibi')->name('FileBibi');
+
+
 Route::get('/doc-sach/{filename}', 'FrontendHomeController@topicFilename')->name('FileTopic');
 
-Route::get('/epub/?book=uploads/topics/{bookname}', 'FrontendHomeController@topicBibi')->name('FileBibi');
 
 
 // ..Sub category url for Section  ( ex: www.site.com/products/2 )
