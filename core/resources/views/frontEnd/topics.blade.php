@@ -68,7 +68,7 @@
                                             .bookshelf .thumb{
                                                 display: inline-block;
                                                 cursor: pointer; 
-                                                margin: 0px 0.5%; 
+                                                margin: 0px 1%; 
                                                 width: 25% !important; 
                                                 box-shadow:0px 1px 3px rgba(0,0,0,.3);
                                                 max-width:200px;
