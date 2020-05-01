@@ -71,7 +71,7 @@
                                                 margin: 0px 0.5%; 
                                                 width: 25% !important; 
                                                 box-shadow:0px 1px 3px rgba(0,0,0,.3);
-                                                max-width:100px;
+                                                max-width:200px;
                                             }
                                             .bookshelf .thumb img{
                                                 width:100%; 
