@@ -481,7 +481,7 @@
                                         </div>   
                                     </div>
                                 @elseif ($file_ext ==".epub" || $file_ext ==".mobi") 
-                                    <a href="{{ route('FileBibi') }}">
+                                    <a href="{{ URL::to('doc-epub/bibi/?book=$Topic->attach_file') }}">
                                         <strong>
                                             {!! Helper::GetIcon(URL::to('uploads/topics/'),$Topic->attach_file) !!}
                                             &nbsp;{{ __('frontend.downloadAttach') }}</strong>
