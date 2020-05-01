@@ -206,8 +206,7 @@
                                             $file_ext = strrchr($Topic->attach_file, ".");
                                             $file_ext = strtolower($file_ext);
                                             ?>
-                                            @if($file_ext ==".pdf")
-
+                                            @if(($file_ext ==".pdf") && (Auth::check())
                                                 <a href="{{ route('FileTopic',['filename'=>$Topic->attach_file]) }}" target="_blank">
                                                     {{ $title }}
                                                 </a>
