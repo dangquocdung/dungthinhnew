@@ -126,8 +126,6 @@
                                         </div>
                                     @endif
 
-                                    
-
                                     {!! Form::text('row_no_'.$Topic->id,$Topic->row_no, array('class' => 'pull-left form-control row_no','id'=>'row_no')) !!}
 
                                     @if($Topic->icon !="")
@@ -141,16 +139,18 @@
                                     </div>
                                 </td>
 
-                                <td>
+                                <td class="text-center">
+
+                                    <small>
+                                        @if($Topic->attach_file !="")
+                                                <a href="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}" target="_blank">
+                                                    {{ $Topic->attach_file }}
+                                                </a>
+                                                
+                                        @endif
+                                    
+                                    </small>
                                 
-                                    @if($Topic->attach_file !="")
-                                        <div>
-                                            <a href="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}" target="_blank">
-                                                {{ $Topic->attach_file }}
-                                            </a>
-                                            
-                                        </div>
-                                    @endif
                                 </td>
                                 @if($WebmasterSection->date_status)
                                     <td class="text-center">
