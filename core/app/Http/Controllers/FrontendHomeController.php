@@ -308,6 +308,12 @@ class FrontendHomeController extends Controller
         
     }
 
+    public function topicBibi()
+    {
+        return view("frontEnd.topic-bibi");
+        
+    }
+
 
     /**
      * Show the form for editing the specified resource.
