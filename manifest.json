@@ -1,8 +1,8 @@
 {
-  "short_name": "Dũng Thịnh Software",
-  "name": "Dũng Thịnh Software App",
+  "short_name": "Dũng Thịnh",
+  "name": "Phần mềm Dũng Thịnh",
   "orientation": "any",
-  "description": "Dũng Thịnh Software App",
+  "description": "Ứng dụng của phần mềm Dũng Thịnh",
   "icons": [
     {
       "src": "./images/icons/icon36x36.png",
