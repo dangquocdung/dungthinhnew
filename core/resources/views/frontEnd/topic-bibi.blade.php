@@ -1,4 +1,4 @@
-@extends('frontEnd.layout-2')
+@extends('frontEnd.layout-bibi')
 
 @section('content')
 <div id="bibi-info">
