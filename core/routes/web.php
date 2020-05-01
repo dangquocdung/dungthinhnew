@@ -370,7 +370,7 @@ Route::get('/{lang?}/{section}/topic/{id}', 'FrontendHomeController@topicByLang'
 
 // ..Flipbook
 
-Route::get('/doc-sach/epub/?book=uploads/topics/15883330424414.epub', 'FrontendHomeController@topicBibi')->name('FileBibi');
+Route::get('/bib/i/?book=15883330424414.epub', 'FrontendHomeController@topicBibi')->name('FileBibi');
 
 
 Route::get('/doc-sach/{filename}', 'FrontendHomeController@topicFilename')->name('FileTopic');
