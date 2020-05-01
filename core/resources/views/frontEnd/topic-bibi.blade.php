@@ -7,8 +7,8 @@
     <title>This E-Book is Published with Bibi | EPUB Reader on your website.</title>
     <link href="{{ URL::asset('frontEnd/css/bibi.css') }}" rel="stylesheet"/>
     <link href="{{ URL::asset('frontEnd/css/bibi.dress.css') }}" rel="stylesheet"/>
-    <script src="{{ URL::asset('frontEnd/js/bibi.js') }}"></script>
-    <script src="{{ URL::asset('frontEnd/js/default.js') }}"></script>
+    <script src="{{ URL::asset('/doc-epub/bibi/resources/script/bibi.js') }}"></script>
+    <script src="{{ URL::asset('/doc-epub/bibi/presets/default.js') }}"></script>
 </head>
 
 <body data-bibi-book="">
