@@ -308,11 +308,6 @@ class FrontendHomeController extends Controller
         
     }
 
-    public function topicBibi()
-    {
-        return view("frontEnd.topic-bibi");
-        
-    }
 
 
     /**
