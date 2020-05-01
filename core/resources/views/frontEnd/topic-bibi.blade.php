@@ -23,6 +23,8 @@
 
     <div id="bibi-book-data" data-bibi-book-mimetype="application/epub+zip" hidden="hidden">
     </div>
+
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="64fe1d03301ca689fd1dcb97-|49" defer=""></script>
  
 
 </body>
