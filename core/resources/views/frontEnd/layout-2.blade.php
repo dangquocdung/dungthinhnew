@@ -4,7 +4,7 @@
     @include('frontEnd.includes.head-2')
 </head>
 
-<body oncontextmenu="return false;">
+<body data-bibi-book="" oncontextmenu="return false;">
 
     @yield('content')
  

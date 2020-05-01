@@ -43,3 +43,6 @@
 <meta property="og:url" content="{{ url()->full()  }}"/>
 <meta property="og:type" content="website"/>
 
+<link href="{{ URL::asset('frontEnd/css/bibi.css') }}" rel="stylesheet"/>
+<script src="{{ URL::asset('frontEnd/js/bibi.js') }}"></script>
+<script src="{{ URL::asset('frontEnd/js/default.js') }}"></script>
