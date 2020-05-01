@@ -127,7 +127,7 @@
 
                                     @if($Topic->attach_file !="")
                                         <div class="pull-right">
-                                            {{ $Topic->attach_file) }}"
+                                            {{ $Topic->attach_file }}
                                         </div>
                                     @endif
 
