@@ -69,7 +69,7 @@
                                                 display: inline-block;
                                                 cursor: pointer; 
                                                 margin: 0px 0.5%; 
-                                                width: 15% !important; 
+                                                width: 25% !important; 
                                                 box-shadow:0px 1px 3px rgba(0,0,0,.3);
                                                 max-width:100px;
                                             }
@@ -127,7 +127,7 @@
                                                 $topic_link_url = Helper::topicURL($Topic->id);
                                             ?>
 
-                                            @if ($key%5==0)
+                                            @if ($key%3==0)
                                             <div class="bookshelf">
                                                 <div class="covers">
                                             @endif
@@ -137,7 +137,7 @@
                                                         </a>
                                                     </div>
                                                     <?php $i++; ?>
-                                            @if ($i%5==0 || $key==($Topics->count()-1))
+                                            @if ($i%3==0 || $key==($Topics->count()-1))
                                                 <?php $i=0; ?>
                                                 </div>
 
