@@ -61,6 +61,7 @@
                                 </label>
                             </th>
                             <th>{{ __('backend.topicName') }}</th>
+                            <th>Attach file</th>
                             @if($WebmasterSection->date_status)
                                 <th class="text-center" style="width:120px;">{{ __('backend.topicDate') }}</th>
                             @endif
@@ -125,11 +126,7 @@
                                         </div>
                                     @endif
 
-                                    @if($Topic->attach_file !="")
-                                        <div class="pull-right">
-                                            {{ $Topic->attach_file }}
-                                        </div>
-                                    @endif
+                                    
 
                                     {!! Form::text('row_no_'.$Topic->id,$Topic->row_no, array('class' => 'pull-left form-control row_no','id'=>'row_no')) !!}
 
@@ -142,6 +139,18 @@
                                             {{ $section }} {!! $sectionSt !!}
                                         </small>
                                     </div>
+                                </td>
+
+                                <td>
+                                
+                                    @if($Topic->attach_file !="")
+                                        <div>
+                                            <a href="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}" target="_blank">
+                                                {{ $Topic->attach_file }}
+                                            </a>
+                                            
+                                        </div>
+                                    @endif
                                 </td>
                                 @if($WebmasterSection->date_status)
                                     <td class="text-center">
