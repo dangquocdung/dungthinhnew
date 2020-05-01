@@ -372,7 +372,7 @@ Route::get('/{lang?}/{section}/topic/{id}', 'FrontendHomeController@topicByLang'
 
 Route::get('/doc-sach/{filename}', 'FrontendHomeController@topicFilename')->name('FileTopic');
 
-Route::get('/doc-sach/epub/?book=topic/uploads/{bookname}', 'FrontendHomeController@topicBibi')->name('FileBibi');
+Route::get('/epub/?book=topic/uploads/{bookname}', 'FrontendHomeController@topicBibi')->name('FileBibi');
 
 
 // ..Sub category url for Section  ( ex: www.site.com/products/2 )
