@@ -61,7 +61,7 @@
                                 </label>
                             </th>
                             <th>{{ __('backend.topicName') }}</th>
-                            <th>Attach file</th>
+                            <th class="text-center" style="width:120px;">Attach file</th>
                             @if($WebmasterSection->date_status)
                                 <th class="text-center" style="width:120px;">{{ __('backend.topicDate') }}</th>
                             @endif
