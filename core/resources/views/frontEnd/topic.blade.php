@@ -487,6 +487,11 @@
                                             {!! Helper::GetIcon(URL::to('uploads/topics/'),$Topic->attach_file) !!}
                                             &nbsp;{{ __('frontend.downloadAttach') }}</strong>
                                     </a>
+
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="{{ URL::to('doc-sach/bibi/?book='.$Topic->attach_file) }}" frameborder="0" height="480px" width="100%"></iframe>
+                                    </div>
+
                                 </div>
                                 @endif
 
