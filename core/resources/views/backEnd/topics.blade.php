@@ -124,6 +124,13 @@
                                                  style="height: 40px" alt="{{ $title }}">
                                         </div>
                                     @endif
+
+                                    @if($Topic->attach_file !="")
+                                        <div class="pull-right">
+                                            {{ $Topic->attach_file) }}"
+                                        </div>
+                                    @endif
+
                                     {!! Form::text('row_no_'.$Topic->id,$Topic->row_no, array('class' => 'pull-left form-control row_no','id'=>'row_no')) !!}
 
                                     @if($Topic->icon !="")

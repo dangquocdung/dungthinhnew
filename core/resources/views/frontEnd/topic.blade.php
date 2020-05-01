@@ -474,12 +474,20 @@
                             $file_ext = strtolower($file_ext);
                             ?>
                                 @if($file_ext ==".jpg"|| $file_ext ==".jpeg"|| $file_ext ==".png"|| $file_ext ==".gif")
-                                <div class="bottom-article">
-                                    <div class="text-center">
-                                        <img src="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}"
-                                             alt="{{ $title }}"/>
-                                    </div>   
-                                </div>
+                                    <div class="bottom-article">
+                                        <div class="text-center">
+                                            <img src="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}"
+                                                alt="{{ $title }}"/>
+                                        </div>   
+                                    </div>
+                                @elseif ($file_ext ==".epub" || $file_ext ==".mobi") 
+                                    <a href="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}">
+                                        <strong>
+                                            {!! Helper::GetIcon(URL::to('uploads/topics/'),$Topic->attach_file) !!}
+                                            &nbsp;{{ __('frontend.downloadAttach') }}</strong>
+                                    </a>
+                                @endif
+
                                 @endif
 
                         @endif
