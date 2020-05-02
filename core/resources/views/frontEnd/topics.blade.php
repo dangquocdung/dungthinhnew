@@ -19,7 +19,11 @@
                                 $WebmasterSectionTitle = @$WebmasterSection->$title_var2;
                             }
                             ?>
-                            <li class="active">{!! $WebmasterSectionTitle !!}</li>
+                            <li class="active">
+                                <a href="{{ route('FrontendTopics',['section'=>$WebmasterSection->seo_url_slug_en]) }}">
+                                    {!! $WebmasterSectionTitle !!}
+                                </a>
+                            </li>
                         @elseif(@$search_word!="")
                             <li class="active">{{ @$search_word }}</li>
                         @else
@@ -30,8 +34,11 @@
                                 <?php
                                 $category_title_var = "title_" . @Helper::currentLanguage()->code;
                                 ?>
-                                <li class="active"><i
-                                        class="icon-angle-right"></i>{{ $CurrentCategory->$category_title_var }}
+                                <li class="active">
+                                    <i class="icon-angle-right"></i>
+                                    <a href="{{ route('FrontendTopics',['section'=>$CurrentCategory->seo_url_slug_en]) }}">
+                                        {{ $CurrentCategory->$category_title_var }}
+                                    </a>
                                 </li>
                             @endif
                         @endif
@@ -40,6 +47,7 @@
             </div>
         </div>
     </section>
+
     <section id="content">
         <div class="container">
             <div class="row">

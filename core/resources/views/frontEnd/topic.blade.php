@@ -91,11 +91,6 @@
                         $file_ext = strrchr($Topic->attach_file, ".");
                         $file_ext = strtolower($file_ext);
                         ?>
-                        @if($file_ext ==".pdf")
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="{{ route('FileTopic',['filename'=>$Topic->attach_file]) }}" frameborder="0" height="480px" width="100%"></iframe>
-                            </div>
-                        @endif
                     @endif
 
                     <article>
