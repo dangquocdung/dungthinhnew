@@ -52,7 +52,9 @@
                                 </a>
                             </li>
                         @else
-                            <li class="active">{{ $title }}</li>
+                            <a href="{{ route('FrontendTopics',['section'=>$WebmasterSection->seo_url_slug_en]) }}">
+                                <li class="active">{{ $title }}</li>
+                            </a>
                         @endif
 
                         @if(!empty($CurrentCategory))
@@ -67,7 +69,9 @@
                             ?>
                             <li class="active">
                                 <i class="icon-angle-right"></i>
+                                <a href="{{ route('FrontendTopics',['section'=>$CurrentCategory->seo_url_slug_en]) }}">
                                 {{ $CurrentCategoryTitle }}
+                                </a>
                             </li>
                         @endif
                     </ul>
