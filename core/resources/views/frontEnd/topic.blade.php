@@ -32,7 +32,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="breadcrumb">
-                        <li><a href="{{ route("Home") }}"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i>
+                        <li>
+                            <a href="{{ route('Home') }}"><i class="fa fa-home"></i></a>
+                            <i class="icon-angle-right"></i>
                         </li>
                         @if($WebmasterSection->id != 1)
                             <?php
@@ -44,10 +46,15 @@
                                 $WebmasterSectionTitle = @$WebmasterSection->$title_var2;
                             }
                             ?>
-                            <li class="active">{!! $WebmasterSectionTitle !!}</li>
+                            <li class="active">
+                                <a href="{{ route('FrontendTopics',['section'=>$WebmasterSection->seo_url_slug_en]) }}">
+                                    {!! $WebmasterSectionTitle !!}
+                                </a>
+                            </li>
                         @else
                             <li class="active">{{ $title }}</li>
                         @endif
+
                         @if(!empty($CurrentCategory))
                             <?php
                             $title_var = "title_" . @Helper::currentLanguage()->code;
@@ -58,8 +65,9 @@
                                 $CurrentCategoryTitle = @$CurrentCategory->$title_var2;
                             }
                             ?>
-                            <li class="active"><i
-                                class="icon-angle-right"></i>{{ $CurrentCategoryTitle }}
+                            <li class="active">
+                                <i class="icon-angle-right"></i>
+                                {{ $CurrentCategoryTitle }}
                             </li>
                         @endif
                     </ul>
