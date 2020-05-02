@@ -1,12 +1,10 @@
 Bibi.preset({
 
-
 //==============================================================================================================================================
 //-- Bookshelf
 //----------------------------------------------------------------------------------------------------------------------------------------------
 
-"bookshelf" : "../../bibi-bookshelf", // Relative path from this preset file to the bookshelf directory. "/" at the end is ignored. (To use a path begins with "http(s)://", read <01> at the bottom of this preset file.)
-
+"bookshelf" : "../../../uploads/topics", // Relative path from this preset file to the bookshelf directory. "/" at the end is ignored. (To use a path begins with "http(s)://", read <01> at the bottom of this preset file.)
 
 //==============================================================================================================================================
 //-- Behavior
@@ -24,7 +22,6 @@ Bibi.preset({
 
 "double-spread-for-reflowable" : "yes", // "yes" or "no" or "desktop" or "mobile"
 "allow-placeholders"           : "yes", // "yes" or "no" or "desktop" or "mobile"
-
 
 //==============================================================================================================================================
 //-- UI / Design
@@ -78,7 +75,6 @@ Bibi.preset({
 
 "book-background"            : "", // CSS background value or ""
 
-
 //==============================================================================================================================================
 //-- Extensions
 //----------------------------------------------------------------------------------------------------------------------------------------------
@@ -89,7 +85,6 @@ Bibi.preset({
     // { "src": "../extensions/FOLDER-NAME-IF-EXISTS/FILE-NAME.js" }, // <THIS LINE IS AN EXAMPLE>
 ""],
 
-
 //==============================================================================================================================================
 //-- Extra
 //----------------------------------------------------------------------------------------------------------------------------------------------
@@ -98,7 +93,6 @@ Bibi.preset({
 "website-name-in-menu"     : "", // "" or name of your website appears in setting-menu as a link. (Requires "website-href")
 "website-href"             : "", // "" or URL of your website to be used for the link in setting-menu. (Requires "website-name-in-menu")
 "remove-bibi-website-link" : false, // true or false (if true, the link to Bibi Website is not to be added in setting-menu)
-
 
 //==============================================================================================================================================
 //-- System
@@ -117,21 +111,17 @@ Bibi.preset({
 
 "trustworthy-origins"                : [],
 
-
 /*
-
 
 //==============================================================================================================================================
 //-- Additional Info.
 //----------------------------------------------------------------------------------------------------------------------------------------------
-
 
 ## <01> You can use a path begins with "http(s)://" for "bookshelf" option in cases of the below:
 
     * The origin of the path defined in the "bookshelf" option is same as the origin of this Bibi.
     * [OR] The origin is included in "trustworthy-origins" option.
         - [AND] The origin allows COR from the origin of this Bibi.
-
 
 ## <02> Bibi tries to extract at first in cases of the below:
 
@@ -145,7 +135,6 @@ Bibi.preset({
     ### Note:
     * If Bibi failed to extract it, automatically tries to load as a folder (directory).
     * The "extract-if-necessary" option affects also as conditions for acceptance of local file. Read <03> at the next.
-
 
 ## <03> Bibi accepts user's local file in cases of the below:
 
@@ -161,8 +150,6 @@ Bibi.preset({
     ### Note:
     * Extension of the file is required even if "extract-if-necessary" is "" (or includes "*").
 
-
 */
-
 
 "bibi": "EPUB Reader on your website." });
