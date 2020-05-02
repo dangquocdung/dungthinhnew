@@ -480,19 +480,25 @@
                                                 alt="{{ $title }}"/>
                                         </div>   
                                     </div>
-                                @elseif ($file_ext ==".epub" || $file_ext ==".mobi") 
-                                <div class="bottom-article">
-                                    <a href="{{ URL::to('doc-sach/bibi/?book='.$Topic->attach_file) }}">
-                                        <strong>
-                                            {!! Helper::GetIcon(URL::to('uploads/topics/'),$Topic->attach_file) !!}
-                                            &nbsp;{{ __('frontend.downloadAttach') }}</strong>
-                                    </a>
 
-                                    <!-- <div class="embed-responsive embed-responsive-16by9">
+                                @elseif ($file_ext ==".pdf")
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="{{ route('FileTopic',['filename'=>$Topic->attach_file]) }}" frameborder="0" height="480px" width="100%"></iframe>
+                                    </div>
+                                @elseif ($file_ext ==".epub") 
+
+                                    <div class="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item" src="{{ URL::to('doc-sach/bibi/?book='.$Topic->attach_file) }}" frameborder="0" height="480px" width="100%"></iframe>
-                                    </div> -->
+                                    </div>
 
-                                </div>
+                                @else
+                                    <div class="bottom-article">
+                                        <a href="{{ URL::to('uploads/topics/'.$Topic->attach_file) }}">
+                                            <strong>
+                                                {!! Helper::GetIcon(URL::to('uploads/topics/'),$Topic->attach_file) !!}
+                                                &nbsp;{{ __('frontend.downloadAttach') }}</strong>
+                                        </a>
+                                    </div>
                                 @endif
 
 
